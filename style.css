@@ -122,6 +122,7 @@ nav a:hover {
 }
 /* 调整导航栏标题大小和外观 */
 .site-header nav a {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 21px;
   font-weight: 600;
   color: #222;
