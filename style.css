@@ -1,14 +1,22 @@
 /* style.css — one file, linked from every page */
 
 /* 1 · Text: set it once on body, everything inside inherits it */
+/* style.css - one file, linked from every page */
+/* 1 . Text: set it once on body, everything inside inherits it */
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  /* 正文、导航用清爽无衬线 */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #1f2937;
   background: #fbfaf7;
 }
 
+/* ✨ 新增：所有一级、二级、三级标题用衬线，增加旅行网站氛围感 */
+h1, h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #3a3028
+}
 /* 2 · The content column */
 main {
   max-width: 48rem;
@@ -111,4 +119,20 @@ nav a:hover {
 #travelBtn:hover {
   background-color: #b91c1c;
   box-shadow: 0 10px 26px rgba(0,0,0,0.3);
+}
+/* 调整导航栏标题大小和外观 */
+.site-header nav a {
+  font-size: 21px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.site-header nav a:hover {
+  background-color: #f0e8df;
+  color: #5a3f2b;
 }
