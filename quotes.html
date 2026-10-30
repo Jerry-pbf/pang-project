@@ -39,16 +39,27 @@
     <footer id="site-footer"></footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            const items = document.querySelectorAll("#quoteList li");
-            const quoteArray = [];
-            for(let q of items){
-                quoteArray.push(q.innerText);
-            }
-            const rand = Math.floor(Math.random() * quoteArray.length);
-            document.getElementById("randomQuote").innerText = quoteArray[rand];
-        })
-    </script>
+document.addEventListener('DOMContentLoaded', async function(){
+  const items = document.querySelectorAll("#quoteList li");
+  const quoteArray = [];
+  for(let q of items){
+    quoteArray.push(q.innerText);
+  }
+
+  let currentIndex = Math.floor(Math.random() * quoteArray.length);
+  const quoteEl = document.getElementById("randomQuote");
+  quoteEl.innerText = quoteArray[currentIndex];
+
+  async function rotateQuote() {
+    quoteEl.style.opacity = 0;
+    await new Promise(resolve => setTimeout(resolve, 500));
+    currentIndex = (currentIndex + 1) % quoteArray.length;
+    quoteEl.innerText = quoteArray[currentIndex];
+    quoteEl.style.opacity = 1;
+  }
+  setInterval(rotateQuote, 5000);
+})
+</script>
     <script src="nav.js"></script>
 </body>
 </html>
