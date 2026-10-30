@@ -88,6 +88,12 @@ nav a:hover {
 .quote blockquote {
   margin: 0;                /* drop the browser's indent inside the card */
 }
+#randomQuote {
+  transition: opacity 0.5s ease;
+  font-size: 1.4rem;
+  line-height:1.6;
+  color: red
+}
 
 /* 6 · The site footer: by id, because every quote has a <footer> too */
 #site-footer {
