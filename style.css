@@ -143,3 +143,37 @@ nav a:hover {
   background-color: #f0e8df;
   color: #5a3f2b;
 }
+/* ===== Development Log 页面专用样式 ===== */
+.log-entry {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.log-entry h3 {
+  color: #222;
+  border-left: 4px solid #4488dd;
+  padding-left: 12px;
+  margin-top: 2rem;
+}
+
+.log-entry p {
+  line-height: 1.7;
+  color: #444;
+}
+
+.log-entry ul {
+  padding-left: 24px;
+  line-height: 1.7;
+}
+
+/* 👉 响应式：手机自动适配（作业响应式得分点！） */
+@media (max-width: 768px) {
+  .log-entry {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+}
